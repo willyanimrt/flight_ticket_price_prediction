@@ -441,6 +441,13 @@ with right:
     with st.container(border=True):
         st.markdown('<h3 class="prediction-title">Predict Price</h3>', unsafe_allow_html=True)
         if st.button("Predict", type="primary", use_container_width=True):
+            
+            print("Model:", type(model))
+            print("Urutan fitur:", model.feature_names_in_)
+            print("\nData input:")
+            print(input_data.to_dict(orient="records"))
+            print("\nHasil prediksi:", model.predict(input_data))
+            
             prediction = model.predict(input_data)
             price = float(prediction[0])
             st.metric("Estimated Ticket Price", format_currency(price))
