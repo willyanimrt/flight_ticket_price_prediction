@@ -5,8 +5,8 @@ import pandas as pd
 import streamlit as st
 
 BASE_DIR = Path(__file__).resolve().parent
-MODEL_PATH = BASE_DIR / "models" / "best_flight_price_model.pkl"
-ROUTE_INFO_PATH = BASE_DIR / "models" / "route_info.pkl"
+MODEL_PATH = BASE_DIR / "best_flight_price_model.pkl"
+ROUTE_INFO_PATH = BASE_DIR / "route_info.pkl"
 
 AIRLINES = ["AirAsia", "Air_India", "GO_FIRST", "Indigo", "SpiceJet", "Vistara"]
 CITIES = ["Bangalore", "Chennai", "Delhi", "Hyderabad", "Kolkata", "Mumbai"]
